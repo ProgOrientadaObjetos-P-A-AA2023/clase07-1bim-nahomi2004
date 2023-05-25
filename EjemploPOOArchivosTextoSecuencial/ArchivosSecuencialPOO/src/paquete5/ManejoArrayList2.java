@@ -32,13 +32,18 @@ public class ManejoArrayList2 {
         
         // ArrayList
         ArrayList <Profesor> profesores2 = new ArrayList<>();
-        profesores2.add(prof1); // 0
-        profesores2.add(prof2); // 1
+        profesores2.add(prof1); // Índice 0
+        profesores2.add(prof2); // Índice 1
         
         // System.out.println(profesores2.get(1).obtenerTipo());
         
         Profesor temporal = profesores2.get(0);
         System.out.println(temporal.obtenerTipo());
+        // Si no me equivoco este sirve para imprimir el tipo de profesor que es
+        // el objeto profesor en la posición 0, que sería el profesor 1
+        // En otras palabras me debe imprimir "facturado"
+        
+        // WOOOOOW!!
         
         /*
         for (int i = 0; i < profesores2.size(); i++) {

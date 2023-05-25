@@ -34,6 +34,10 @@ public class ManejoArrayList3 {
         calificaciones.add(c1);
         calificaciones.add(c2);
         calificaciones.add(c3);
+        // Si no me equivoco en esta parte el licen está llenando el ArrayList
+        // con los objetos que antes creó, no es como en los arreglo normales
+        // en este tipo de arreglos debes usar el nombreArrayList.add para 
+        // añadir y pata obtener necesitas del nombreArrayList.get(indice)
         
         for (int i = 0; i < calificaciones.size(); i++) {
             System.out.printf("%s - %s - %.2f\n", 
