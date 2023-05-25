@@ -12,7 +12,49 @@ import java.io.Serializable;
  * @author reroes
  */
 public class Hospital implements Serializable{
-    String nombre;
-    int numeroCamas;
-    double presupuesto;
+    
+    private String nombre;
+    private int numeroCamas;
+    private double presupuesto;
+    private Ciudad ciudad;
+    
+    public Hospital (String n, int num, double p, Ciudad c) {
+        nombre = n;
+        numeroCamas = num;
+        presupuesto = p;
+        ciudad = c;
+    }
+    
+    public void establecerNombre(String n) {
+        nombre = n;
+    }
+
+    public void establecerNumeroCamas(int n) {
+        numeroCamas = n;
+    }
+
+    public void establecerPresupuesto(double n) {
+        presupuesto = n;
+    }
+
+    public void establecerCiudad(Ciudad n) {
+        ciudad = n;
+    }    
+    
+    public String obtenerNombre() {
+        return nombre;
+    }
+
+    public int obtenerNumeroCamas() {
+        return numeroCamas;
+    }
+
+    public double obtenerPresupuesto() {
+        return presupuesto;
+    }
+
+    public Ciudad obtenerCiudad() {
+        return ciudad;
+    }  
+    
 }

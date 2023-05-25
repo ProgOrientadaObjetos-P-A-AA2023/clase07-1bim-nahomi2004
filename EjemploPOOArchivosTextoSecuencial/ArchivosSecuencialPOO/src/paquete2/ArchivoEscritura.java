@@ -20,11 +20,12 @@ public class ArchivoEscritura {
     private String rutaArchivo;
     private Profesor registro;
     private Formatter salidaArchivo;
+    // Es para agregarle información al archivo que creamos 
 
     public ArchivoEscritura(String n) {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s", nombreArchivo); // "data/profesores2.txt"
-        
+        // Esto le asigna el nombre del archivo y lo manda a la carpeta data
     }
 
     public void establecerNombreArchivo(String n) {
@@ -54,12 +55,17 @@ public class ArchivoEscritura {
 
     // agrega registros al archivo
     public void establecerSalida() {
+        // Sirve para descuartizar el objeto y enviarlo
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
             Profesor p = obtenerRegistro();
+            // Aquí le damos formalmente vida al objeto de tipo Formatter
+            // el true no sobreescribe, escribe
             
             String cadenaRegistro = String.format("%s;%s",
                     p.obtenerNombre(), p.obtenerTipo());
+            // Aquí extraigo lo del objeto para crear una cadena que enviaré
+            // al archivo
             
             salidaArchivo.format("%s\n", cadenaRegistro);
             salidaArchivo.close();

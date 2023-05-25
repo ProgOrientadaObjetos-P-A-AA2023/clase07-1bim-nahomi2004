@@ -19,6 +19,7 @@ public class ArchivoLectura {
     private String nombreArchivo;
     private String rutaArchivo;
     private ArrayList<Profesor> lista;
+    // Este une a lo que descuartizamos y leerlo
 
     public ArchivoLectura(String n) {
         nombreArchivo = n;
@@ -64,11 +65,15 @@ public class ArchivoLectura {
         if (f.exists()) {
 
             while (entrada.hasNext()) {
+                // Mientras hayan lineas que leer, este se ejecutará
                 String linea = entrada.nextLine(); // Tara Hernandez;contratado
 
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
                 );
+                // Para asteristco debe ponerse \\* porque debe saltarlo
+                // para coma y punto y coma se pone tal cual
+                
                 Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
                         linea_partes.get(1) // contratado
                 );
@@ -101,5 +106,6 @@ public class ArchivoLectura {
                     profTemporal.obtenerTipo());    // obtenerLista().get(i).obtenerTipo());
         }
         return cadena;
-    }
+    }    
+    // arreglo.length es para los estáticos, arreglo.size es para los dinámicos
 }
